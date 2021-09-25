@@ -17,15 +17,33 @@ html {
     background: transparent; /* make scrollbar transparent */
 }
 
-@keyframes wider-text{
-  50%{
-    transform: scale3d(1.2,1.2,1.2);
-  }
-}
-
 @keyframes blink{
   50%{
     opacity: 0;
+  }
+}
+
+@keyframes blinkonce {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%{
+    position: relative;
+    bottom: 0rem;
+  }
+  50%{
+    position: relative;
+    bottom: 0.5rem;
+  }
+  100%{
+    position: relative;
+    bottom: 0rem;
   }
 }
 
@@ -45,7 +63,7 @@ html {
   font-size: 4rem;
   display: flex;
   color: white;
-  animation: blink 5s linear infinite;
+  animation: blinkonce 5s linear;
 }
 
 #slogan p{
@@ -76,9 +94,14 @@ html {
   font-size: 3rem;
 }
 
+a{
+  transition: transform 2s linear;
+}
+
 a:hover{
+  opacity: 1;
   text-decoration: none !important;
-  animation: wider-text 2s infinite;
+  transform: scale3d(1.2,1.2,1.2);
   z-index: 1;
 }
 
@@ -118,7 +141,7 @@ a:hover{
 #preferred-coffee{
   color: white !important;
   font-family: serif;
-  font-size: 1.5rem;
+  font-size: 3rem;
   animation: blink 2s linear infinite;
 }
 
@@ -141,4 +164,44 @@ a:hover{
   background-color: transparent !important;
   border: none !important;
   box-shadow: 0 1rem 3rem rgba(0,0,0,1)!important;
+}
+
+#contact-section{
+  display: flex;
+  flex-direction: column;
+  background: rgb(139 69 19);
+}
+
+#contact-div{
+  animation: blinkonce 2s linear;
+  flex-grow: 0.3;
+  margin-bottom: 0 !important;
+}
+
+#contact-div.container-lg, #contact-us-div.container-lg{
+  background: rgba(255, 255, 255, 0.5)!important;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#location-div, #telephone-div, #mail-div{
+  display: flex;
+  justify-content: space-between;
+}
+
+#location-div, #telephone-div{
+  margin-bottom: 2rem;
+}
+
+#location-p, #telephone-p, #mail-p{
+  font-family: serif;
+  font-size: 1.5rem;
+}
+
+#location-svg, #telephone-svg, #mail-svg{
+  animation: bounce 2s linear infinite;
 }
