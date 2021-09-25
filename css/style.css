@@ -5,6 +5,7 @@ html{
 section{
   height: 100vh;
   width: 100vw;
+  overflow: scroll;
 }
 
 html {
@@ -22,13 +23,7 @@ html {
   }
 }
 
-@keyframes slogan-animation{
-  50%{
-    opacity: 0;
-  }
-}
-
-@keyframes arrow-animation {
+@keyframes blink{
   50%{
     opacity: 0;
   }
@@ -50,7 +45,7 @@ html {
   font-size: 4rem;
   display: flex;
   color: white;
-  animation: slogan-animation 5s linear infinite;
+  animation: blink 5s linear infinite;
 }
 
 #slogan p{
@@ -60,7 +55,7 @@ html {
 }
 
 .arrow{
-  animation: arrow-animation 5s linear infinite;
+  animation: blink 5s linear infinite;
 }
 
 #navbar{
@@ -88,8 +83,8 @@ a:hover{
 }
 
 .jumbotron{
-  margin: 30px !important;
   color: white;
+  margin-bottom: 0px !important;
   background: rgba(0,0,0,0.5) !important;
   margin: auto;
 }
@@ -102,12 +97,16 @@ a:hover{
 #best-coffee{
   display: inherit;
   align-items: center;
+  object-fit: cover;
+  height: 100vh;
 }
 
 #section-2-header{
   color: white !important;
   font-family: serif;
   font-size: 3rem;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
 }
 
 #coffee-images{
@@ -120,7 +119,7 @@ a:hover{
   color: white !important;
   font-family: serif;
   font-size: 1.5rem;
-  animation: wider-text 2s linear infinite;
+  animation: blink 2s linear infinite;
 }
 
 #three-coffee{
