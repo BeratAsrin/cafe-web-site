@@ -1,0 +1,145 @@
+html{
+  scroll-behavior: smooth;
+}
+
+section{
+  height: 100vh;
+  width: 100vw;
+}
+
+html {
+  overflow:   scroll;
+}
+::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+@keyframes wider-text{
+  50%{
+    transform: scale3d(1.2,1.2,1.2);
+  }
+}
+
+@keyframes slogan-animation{
+  50%{
+    opacity: 0;
+  }
+}
+
+@keyframes arrow-animation {
+  50%{
+    opacity: 0;
+  }
+}
+
+#section-1{
+  background-image: url("../img/home_page.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+}
+
+#slogan{
+  font-family: serif;
+  flex-grow: 1;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  display: flex;
+  color: white;
+  animation: slogan-animation 5s linear infinite;
+}
+
+#slogan p{
+  margin: 0px ;
+  background: rgba(0,0,0,0.5);
+  border-radius: 1rem;
+}
+
+.arrow{
+  animation: arrow-animation 5s linear infinite;
+}
+
+#navbar{
+  text-shadow: 0 1rem 1rem rgba(255,255,255,0.5)!important;
+}
+
+#links-of-navbar{
+  display: flex;
+}
+
+#logo, a{
+  color: white !important;
+  font-family: serif;
+  font-size: 1.5rem;
+}
+
+#logo{
+  font-size: 3rem;
+}
+
+a:hover{
+  text-decoration: none !important;
+  animation: wider-text 2s infinite;
+  z-index: 1;
+}
+
+.jumbotron{
+  margin: 30px !important;
+  color: white;
+  background: rgba(0,0,0,0.5) !important;
+  margin: auto;
+}
+
+#section-2{
+  background: rgb(139 69 19 / 84%);
+  display: flex;
+}
+
+#best-coffee{
+  display: inherit;
+  align-items: center;
+}
+
+#section-2-header{
+  color: white !important;
+  font-family: serif;
+  font-size: 3rem;
+}
+
+#coffee-images{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#preferred-coffee{
+  color: white !important;
+  font-family: serif;
+  font-size: 1.5rem;
+  animation: wider-text 2s linear infinite;
+}
+
+#three-coffee{
+  display: flex;
+  flex-direction: row;
+}
+
+#three-coffee a{
+  margin: 0.5rem;
+}
+
+#three-coffee a img{
+  min-width:100%;
+  min-height:100%;
+  object-fit: cover;
+}
+
+.card{
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,1)!important;
+}
