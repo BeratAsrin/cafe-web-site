@@ -78,6 +78,8 @@ html {
 
 #navbar{
   text-shadow: 0 1rem 1rem rgba(255,255,255,0.5)!important;
+  background: rgba(0,0,0,0.2);
+  border-radius: 0rem 0rem 3rem 3rem;
 }
 
 #links-of-navbar{
@@ -118,18 +120,21 @@ a:hover{
 }
 
 #best-coffee{
-  display: inherit;
+  display: flex;
   align-items: center;
   object-fit: cover;
+  word-wrap: break-word;
+  width: 20rem;
   height: 100vh;
+  margin-left: 0px;
 }
 
 #section-2-header{
   color: white !important;
   font-family: serif;
   font-size: 3rem;
-  margin-left: 0px !important;
-  margin-right: 0px !important;
+  margin: 0 !important;
+
 }
 
 #coffee-images{
@@ -169,17 +174,22 @@ a:hover{
 #contact-section{
   display: flex;
   flex-direction: column;
-  background: rgb(139 69 19);
+  background-image: url("../img/contact_background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #contact-div{
   animation: blinkonce 2s linear;
-  flex-grow: 0.3;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
   margin-bottom: 0 !important;
+
 }
 
-#contact-div.container-lg, #contact-us-div.container-lg{
-  background: rgba(255, 255, 255, 0.5)!important;
+#contact-div .container-lg{
+  background: rgba(0, 0, 0, 0.5)!important;
   border-radius: 1rem;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -194,14 +204,20 @@ a:hover{
 }
 
 #location-div, #telephone-div{
-  margin-bottom: 2rem;
+  margin-bottom: 1.75rem;
 }
 
 #location-p, #telephone-p, #mail-p{
   font-family: serif;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
 }
 
 #location-svg, #telephone-svg, #mail-svg{
   animation: bounce 2s linear infinite;
+}
+
+.container-lg{
+  margin-bottom: 0px !important;
 }
